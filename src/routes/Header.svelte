@@ -1,19 +1,28 @@
 <script>
 	import { page } from '$app/stores';
+
+	let nav = [
+		{ title: 'About', path: '/about' },
+		{ title: 'Test', path: '/test' },
+		{ title: 'Posts', path: '/post' }
+	];
 </script>
 
 <header>
-	<nav>
-		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/test' ? 'page' : undefined}>
-				<a href="/test">Test</a>
-			</li>
-		</ul>
+	<nav class="navbar bg-base-100">
+		<div class="flex-1">
+			<a href="/" class="btn btn-ghost normal-case text-xl">App</a>
+		</div>
+		<div class="flex-none">
+			<ul class="menu menu-horizontal px-1">
+				{#each nav as n}
+					<li>
+						<a href={n.path} class:active={$page.url.pathname === n.path}>
+							{n.title}
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</div>
 	</nav>
 </header>
