@@ -4,7 +4,7 @@
 	let nav = [
 		{ title: 'About', path: '/about' },
 		{ title: 'Test', path: '/test' },
-		{ title: 'Posts', path: '/post' }
+		{ title: 'Posts', path: '/posts' }
 	];
 </script>
 
