@@ -7,11 +7,13 @@
 <div class="app">
 	<Header />
 
-	<main>
+	<main class="max-w-screen-xl mx-auto px-5">
 		<slot />
 	</main>
 
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+	<footer class="footer footer-center p-4 bg-base-300 text-base-content">
+		<div>
+			<p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+		</div>
 	</footer>
 </div>
